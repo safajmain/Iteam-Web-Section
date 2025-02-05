@@ -6,6 +6,16 @@
     font-family: 'Flamenco'; 
     src: url('font/Flamenco/Flamenco-Light.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('font/BarlowCondensed/BarlowCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('font/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -175,4 +185,241 @@ bottom:50px;
         bottom: 0;
         opacity: 1;
     }
+}
+
+/*safa */
+.frontend-section h1 {
+    font-family: "Oswald";
+    color: #fff;
+    font-style: normal;
+    padding: 70px;
+    text-align: center;
+    font-size: clamp(40px, 6vw, 80px);
+}
+
+.frontend-section .cards {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 70px;
+    /* margin-bottom: 20px;*/
+}
+.frontend-section .card { 
+    width: 280px;
+    height: 450px;
+    width: calc(20% - 20px); 
+    
+    border-radius: 20px;
+    backdrop-filter: blur(510px); 
+    background:  #a2a7a987; 
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    text-align: center;
+    position: relative;
+     border: none; 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);  
+}
+
+ 
+.card img {
+    border: #ffffff 2px solid;
+    border-radius: 0%;
+ }
+ .card  button{
+    margin-bottom: 20px;
+
+ }
+
+ @media (max-width: 768px) {
+    .frontend-section .cards {
+        padding: 0 20px;  
+    }
+
+    .frontend-section .card {
+        width: 60%;  
+        height:  450px;
+        margin: auto;
+        margin-bottom: 20px;  
+     }
+}
+
+
+.frontend-part2 h1 {
+    font-family: "Oswald";
+    color: #fff;
+    font-style: normal;
+    padding: 120px 0px 50px 0px;
+    text-align: center;
+    font-size: clamp(40px, 6vw, 80px);
+}
+ 
+.frontend-part2 .cards {
+    display: flex;
+    flex-direction: column;  
+    gap: 20px;  
+    padding: 0 50px;
+}
+ 
+.frontend-part2 .cardd {
+    width: 100%;  
+    height: 120px;  
+    display: flex;
+    justify-content: flex-start;  
+    align-items: center;
+    background: rgba(255, 255, 255, 0.222);
+    border-radius: 20px;
+    box-shadow: 0 0px 10px #ffffff;
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.frontend-part2 .cardd img {
+    width: 80px;  
+    height: 80px;
+    object-fit: cover; 
+    gap: 20px;
+    border-radius: 15px;
+    left: 10px;  
+    z-index: 1;
+}
+
+.frontend-part2 .cardd .content {
+    width: calc(100% - 80px);  
+    display: flex;
+    flex-direction: column;  
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: left; 
+    margin-left: 10px;  
+}
+
+.frontend-part2 .cardd h1 {
+    font-size: 1.2rem;
+    color: #fff;
+    padding-top: 10px; 
+     padding-left: 12px;
+    margin: 0; 
+     overflow: hidden;
+     text-overflow: ellipsis;
+ }
+
+.frontend-part2 .cardd button {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 12px 30px;
+    background: #fff;
+    color: #E99454;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: absolute; 
+     right: 10px; 
+     z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.frontend-part2 .cardd button:hover {
+    background-color: #E99454;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px #E99454;
+}
+.cardd p{
+    color: #ddd;
+    font-size: medium;
+    margin-left: 0%;
+    padding-right: 10px;
+}
+
+ @media (max-width: 768px) {
+    .frontend-part2 h1{
+        padding:80px 8px 15px 10px;
+        font-size: 2.4rem;
+     }
+    .frontend-part2 .cardd  {
+        width: 100%;
+        padding: 0%;
+        margin:  auto;
+        height: 150px; 
+     }
+
+    .frontend-part2 .cardd h1 {
+        font-size: .8rem; 
+        padding-left: 8px; 
+    }
+
+    .frontend-part2 .cardd .content {
+        width: calc(100% - 60px); 
+     }
+
+    .frontend-part2 .cards {
+        gap: 20px; 
+        margin-bottom: 20px;
+    }
+}
+ 
+.multiple-choice {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.choice {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+.choice select {
+    padding: 10px;
+    width: 20%; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    margin-left: 10px; 
+}
+ @media (max-width: 768px) {
+    .cardd {
+        width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .cardd h1, .cardd p {
+        font-size: .8rem; 
+    }
+
+    .cardd button {
+        font-size: .17rem;
+        margin-top: 89px;
+        height: 55px;
+        width: 35%; 
+     }
+    
+.choice select {
+    padding: 10px;
+    width: 80%; 
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
 }
