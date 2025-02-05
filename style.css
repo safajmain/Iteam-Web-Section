@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'KosugiMaru'; 
+    src: url('font/Kosugi_Maru/KosugiMaru-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Flamenco'; 
+    src: url('font/Flamenco/Flamenco-Light.ttf') format('truetype');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to bottom, #00090D, #004E6A);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5rem;   
+}
+
+header img {
+    width: 60px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+}
+nav li {
+    margin-right: 80px;
+}
+nav ul li a {
+    font-family: 'KosugiMaru', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(18px, 2.5vw, 25px);
+    filter: drop-shadow(0 0 2px #ffffff);
+    transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+
+    color: #E99454;
+    filter: drop-shadow(0 0 2px #E99454);
+}
+.hero {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: smoothAnimation 1s ease-in-out;
+}
+
+.hero h2 {
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    color: #fff;
+}
+.hero h1 {
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(50px, 7vw, 100px);
+    color: #fff;
+}
+.hero p {
+    font-size: clamp(16px, 3vw, 30px);
+    max-width: 80%; 
+    margin: 0 auto; 
+    font-family: 'Flamenco', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+}
+.tasks{
+    padding: 100px;
+}
+.tasks h1 {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(40px, 6vw, 80px);
+    color: #fff;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    width: 280px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.222);
+    border-radius: 20px;
+    box-shadow: 0 0px 10px #ffffff;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    z-index: 1;
+}
+.card h1{
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    color: #fff;
+}
+.card button {
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 12px 30px;
+    background: #fff;
+    color: #E99454;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.card button:hover {
+    background-color: #E99454;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px #E99454;
+}
+footer {
+    border-radius: 10px;
+    background-color: #004e6a87;
+    color: #ffffff;
+    text-align: center;
+    padding: 5rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav li {
+        margin-bottom: 10px;
+    }
+    .hero p {
+        max-width: 90%;
+    }
+}
+@keyframes smoothAnimation {
+    0% {
+bottom:50px;        
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
