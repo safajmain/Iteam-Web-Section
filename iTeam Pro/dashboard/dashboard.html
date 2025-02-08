@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Frontend</a></li>
+                <li><a href="#">Backend</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Statistics Section -->
+        <section id="statistics" class="active">
+            <div class="dashboard">
+                <div class="dashboard-buttons">
+                    <button onclick="showSection('statistics')">Statistics</button>
+                    <button onclick="showSection('edit-sources')">Edit Sources</button>
+                    <button onclick="showSection('advertisement')">Advertisement</button>
+                </div>
+            <div class="box">
+                <div style="width: 80%; margin: auto;">
+                    <canvas id="myChart"></canvas>
+                </div>
+            
+                <div class="boxvaluesmax">
+<h2>Highest number of visits</h2>
+<h1></h1>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="edit" class="active">
+            <div class="dashboard">
+                <div class="dashboard-buttons">
+                    <button onclick="showSection('statistics')">Statistics</button>
+                    <button onclick="showSection('edit-sources')">Edit Sources</button>
+                    <button onclick="showSection('advertisement')">Advertisement</button>
+                </div>
+                <h1>edit card</h1>
+                <form class="edit-form">
+                    <input type="file">
+                    <input type="text" placeholder="Enter task link">
+                    <button type="submit" >Add Task</button>
+                    
+                </form>
+                <div class="card">
+                    <img src="/img/logo.webp" alt="react">
+                    <h1>React</h1>
+                    <button>Show</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- Edit Sources Section -->
+        <section id="edit-sources">
+            <div class="dashboard">
+                <div class="dashboard-buttons">
+                    <button onclick="showSection('statistics')">Statistics</button>
+                    <button onclick="showSection('edit-sources')">Edit Sources</button>
+                    <button onclick="showSection('advertisement')">Advertisement</button>
+                </div>
+
+                <div class="container-cards-wrapper">
+                    <h1>Tasks of iTeam members</h1>
+                    <div class="container-cards">
+                        <div class="cards">
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button" onclick="showSection('edit')"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                        </div>
+                      
+
+
+                    </div>
+                    <h1>tools</h1>
+                    <div class="container-cards">
+                        <div class="cards">
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Frontend learning resources</h1>
+                    <div class="container-cards">
+                        <div class="cards">
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Articles about Frontend</h1>
+                    <div class="container-cards">
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                    </div>
+                    <h1>backend learning resources</h1>
+                    <div class="container-cards">
+                        <div class="cards">
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                            <div class="card">
+                                <div class="top-buttons">
+                                    <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                    <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                                <img src="/img/logo.webp" alt="react">
+                                <h1>React</h1>
+                                <button>Show</button>
+                            </div>
+                        </div>
+                    </div>
+                    <h1>Articles about backend</h1>
+                    <div class="container-cards">
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                        <div class="card">
+                            <div class="top-buttons">
+                                <button class="edit-button"><i class="fa-solid fa-pencil"></i></button>
+                                <button class="delete-button"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            <img src="/img/logo.webp" alt="react">
+                            <h1>name Articles</h1>
+                            <button>More learn</button>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- Advertisement Section -->
+        <section id="advertisement">
+            <div class="dashboard">
+                <div class="dashboard-buttons">
+                    <button onclick="showSection('statistics')">Statistics</button>
+                    <button onclick="showSection('edit-sources')">Edit Sources</button>
+                    <button onclick="showSection('advertisement')">Advertisement</button>
+                </div>
+                <div class="box">
+                <!-- Advertisement Box -->
+                <div class="message-box">
+                    <textarea placeholder="Write your message..." rows="5" cols="50"></textarea>
+                    <button class="send-btn">Send</button>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // JavaScript Function to Show Specific Section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+        }
+        window.onload = () => {
+            showSection('statistics');
+        };
+    
+        const ctx = document.getElementById('myChart').getContext('2d');
+        document.getElementById('myChart').style.borderRadius = '15px';
+    
+        const dataValues = [23, 30, 49, 100, 120, 198, 199, 234, 275, 500, 1200, 1468];
+        const maxVal = Math.max(...dataValues);
+    
+        const getColor = (value) => {
+            const percentage = value / maxVal;
+            if (percentage > 0.75) return '#ff4d4d';
+            if (percentage > 0.5) return '#ffa64d';
+            if (percentage > 0.25) return '#ffff4d';
+            return '#4dff4d';
+        };
+    
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                datasets: [
+                    {
+                        label: 'Visiting Website',
+                        data: dataValues,
+                        backgroundColor: dataValues.map(getColor),
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#ffffff'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#ffffff'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#ffffff'
+                        }
+                    }
+                }
+            }
+        });
+        function clearDashboard() {
+    const dashboard = document.querySelector('.dashboard'); // تحديد الداشبورد
+    if (dashboard) {
+        dashboard.innerHTML = ''; // إفراغ المحتوى داخل الداشبورد
+    }
+}
+        document.getElementById('myChart').style.backgroundColor = '#222222'; 
+    
+       
+        document.querySelector('.boxvaluesmax h1').textContent = maxVal;
+    </script>
+    
+</body>
+</html>
