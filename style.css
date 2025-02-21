@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'KosugiMaru'; 
-    src: url('font/Kosugi_Maru/KosugiMaru-Regular.ttf') format('truetype');
+    src: url('dashboard/font/Kosugi_Maru/KosugiMaru-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Flamenco'; 
-    src: url('font/Flamenco/Flamenco-Light.ttf') format('truetype');
+    src: url('dashboard/font/Flamenco/Flamenco-Light.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Barlow Condensed';
-    src: url('font/BarlowCondensed/BarlowCondensed-Regular.ttf') format('truetype');
+    src: url('dashboard/font/BarlowCondensed/BarlowCondensed-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Oswald';
-    src: url('font/Oswald/Oswald-Regular.ttf') format('truetype');
+    src: url('dashboard/font/Oswald/Oswald-Regular.ttf') format('truetype');
 }
 
 * {
@@ -27,22 +27,64 @@ body {
     background-attachment: fixed;
 }
 header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 1rem 5rem;   
+    width: 100%;
+    padding: 1.4rem 5rem;
+    z-index: 1000;
+    transition: background 0.5s ease-in-out;
+}
+::-webkit-scrollbar {
+    width: 10px;
 }
 
-header img {
-    width: 60px;
+::-webkit-scrollbar-track {
+    background: #001a25;
+   
 }
+
+::-webkit-scrollbar-thumb {
+    background:  #004E6A;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:#007ea7;
+}
+
+header.scrolled {
+    background: #00000023;
+    filter: drop-shadow(0 0 6px #6c6c6c);
+    backdrop-filter: blur(10px);
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 nav ul {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
 }
-nav li {
-    margin-right: 80px;
+
+nav ul li {
+    margin: 0;
 }
+
 nav ul li a {
     font-family: 'KosugiMaru', sans-serif;
     text-decoration: none;
@@ -51,11 +93,13 @@ nav ul li a {
     filter: drop-shadow(0 0 2px #ffffff);
     transition: all 0.3s ease-in-out;
 }
-nav ul li a:hover {
 
+nav ul li a:hover {
     color: #E99454;
-    filter: drop-shadow(0 0 2px #E99454);
+    filter: drop-shadow(0 0 4px #E99454);
 }
+
+
 .hero {
     position: relative;
     height: 90vh;
@@ -153,6 +197,10 @@ nav ul li a:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px #E99454;
 }
+footer p a{
+    text-decoration: none;
+    color: #ffffff;
+}
 footer {
     border-radius: 10px;
     background-color: #004e6a87;
@@ -165,9 +213,10 @@ footer {
     header {
         padding: 1rem 2rem;
     }
+    
     nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
     nav li {
         margin-bottom: 10px;
@@ -188,54 +237,71 @@ bottom:50px;
 }
 
 /*safa */
-.frontend-section h1 {
-    font-family: "Oswald";
-    color: #fff;
-    font-style: normal;
-    padding: 70px;
-    text-align: center;
-    font-size: clamp(40px, 6vw, 80px);
+.frontend-section {
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
-
 .frontend-section .cards {
-    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    padding: 0 70px;
-    /* margin-bottom: 20px;*/
 }
-.frontend-section .card { 
+.frontend-section  .card {
     width: 280px;
     height: 450px;
-    width: calc(20% - 20px); 
-    
+    background: rgba(255, 255, 255, 0.222);
     border-radius: 20px;
-    backdrop-filter: blur(510px); 
-    background:  #a2a7a987; 
-
+    box-shadow: 0 0px 10px #ffffff;
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 20px; 
+    padding: 30px;
     text-align: center;
     position: relative;
-     border: none; 
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);  
+    overflow: hidden;
 }
 
- 
-.card img {
-    border: #ffffff 2px solid;
-    border-radius: 0%;
- }
- .card  button{
-    margin-bottom: 20px;
+.frontend-section .card img {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    object-fit: cover;
+    z-index: 1;
+}
+.frontend-section  h1{
 
- }
-
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    color: #fff;
+}
+.frontend-section  .card button {
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 12px 30px;
+    background: #fff;
+    color: #E99454;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.frontend-section .card button:hover {
+    background-color: #E99454;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px #E99454;
+}
  @media (max-width: 768px) {
     .frontend-section .cards {
         padding: 0 20px;  
@@ -251,7 +317,7 @@ bottom:50px;
 
 
 .frontend-part2 h1 {
-    font-family: "Oswald";
+    font-family: 'Flamenco', sans-serif;
     color: #fff;
     font-style: normal;
     padding: 120px 0px 50px 0px;

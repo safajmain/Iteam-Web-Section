@@ -1,0 +1,423 @@
+@font-face {
+    font-family: 'KosugiMaru'; 
+    src: url('font/Kosugi_Maru/KosugiMaru-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Flamenco'; 
+    src: url('font/Flamenco/Flamenco-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Barlow Condensed';
+    src: url('font/BarlowCondensed/BarlowCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Oswald';
+    src: url('font/Oswald/Oswald-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: linear-gradient(to bottom, #00090D, #004E6A);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.4rem 5vw;
+    z-index: 1000;
+    transition: background 0.5s ease-in-out;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #001a25;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #004E6A;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #007ea7;
+}
+
+header.scrolled {
+    background: #00000023;
+    filter: drop-shadow(0 0 6px #6c6c6c);
+    backdrop-filter: blur(10px);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    font-family: 'KosugiMaru', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(18px, 2.5vw, 25px);
+    filter: drop-shadow(0 0 2px #ffffff);
+    transition: all 0.3s ease-in-out;
+}
+
+
+nav ul li a:hover {
+    color: #E99454;
+    filter: drop-shadow(0 0 4px #E99454);
+}
+.dashboard {
+    background-color: #111111;
+    color: #fff;
+    font-family: 'Flamenco', sans-serif;
+    height: 80vh; 
+    width: 70vw; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 5px; 
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2); 
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dashboard .dashboard-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+
+}
+
+.dashboard button {
+    font-weight: bolder;
+    cursor: pointer;
+    border: none;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    background: #111111;
+    color: #fff;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-family: 'Flamenco', sans-serif;
+    transition: all 0.3s ease-in-out;
+    flex-grow: 1; 
+    flex-basis: 30%; 
+    text-align: center; 
+}
+
+.dashboard button:hover,
+.dashboard button:focus {
+    background: #060606;
+    color: #fff;
+    filter: drop-shadow(0 0 1px #ffffff);
+}
+section {
+    display: none; 
+}
+
+section.active {
+    display: block; 
+}
+
+.boxvaluesmax {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    background-color: #2e2e2e;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.box{
+    padding:3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 5rem;
+    flex-direction: row;
+}
+.boxvaluesmax h1 {
+       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif   ;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.boxvaluesmax h2 {
+ 
+    text-align: center;
+    margin-top: 5px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+#advertisement {
+    text-align: center; 
+    padding: 30px 0;
+    color: white;
+}
+
+.message-box {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-box textarea {
+    width: 100%;
+    background-color: #101010;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    font-weight: bolder;
+    font-family: 'Flamenco', sans-serif;
+    font-size: 26px;
+}
+.message-box textarea::placeholder {
+    color: white;
+    font-family: 'Flamenco', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+text-align: center;
+padding: 20px;
+
+}
+.message-box textarea:focus {
+    background-color: #0b0b0b;
+    border: 1px solid #ffffff; 
+    transition: all 0.5s ease-in-out;
+}
+.message-box .send-btn {
+    background-color: #0e0e0e;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    margin-top: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+background-color: #151515;
+padding: 10px 40px;
+}
+
+
+.container-cards {
+    display: flex;
+    justify-content:start;
+align-items: center;
+    gap: 20px; 
+    padding: 100px 10px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.card {
+    background: rgba(255, 255, 255, 0.222);
+    border-radius: 20px;
+    box-shadow: 0 0px 10px #ffffff;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+    object-fit: cover;
+    z-index: 1;
+}
+.card h1{
+    font-family: 'Flamenco', sans-serif;
+    font-size: clamp(20px, 3vw, 30px);
+    color: #fff;
+}
+.card button {
+    margin-top: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 12px 15px;
+    background: #fff;
+    color: #E99454;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.card button:hover {
+    background-color: #E99454;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px #E99454;
+}
+
+.container-cards-wrapper {
+    position: relative;
+    overflow-y: scroll; 
+    max-height: 70vh; 
+    margin-top: 2rem;
+}
+
+.container-cards {
+    margin-bottom: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem; 
+}
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 3vw;
+    }
+    nav ul {
+        gap: 3vw;
+    }
+    .dashboard {
+        width: 80vw;
+        height: 70vh;
+    }
+    .dashboard button {
+      white-space: nowrap;
+        padding: 1rem 2vw;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        flex-basis: 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 2vw;
+    }
+    nav ul {
+        gap: 1vw;
+    }
+    .dashboard {
+        width: 90vw;
+        height: 65vh;
+    }
+    .dashboard button {
+       
+        white-space: nowrap;
+        padding: 1rem 2vw;
+        font-size: clamp(1rem, 3vw, 1rem);
+        flex-basis: 100%; 
+    }
+}
+.edit-form {
+  align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    gap: 30px;
+padding: 5vh;
+}
+
+#edit .card{
+    background: rgba(255, 255, 255, 0.222);
+    border-radius: 20px;
+    box-shadow: 0 0px 10px #ffffff;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-form input[type="file"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+.edit-form input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px; 
+}
+
+.edit-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #E99454;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.edit-form button[type="submit"]:hover {
+    background-color: #E99454;
+    color: #fff;
+    transform: scale(1.1);
+}
